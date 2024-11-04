@@ -1,0 +1,90 @@
+/* Estilo geral do corpo da página */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte divertida */
+    background-color: #87cefa; /* Cor de fundo azul clara */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Altura total da visualização */
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Estilo do contêiner do jogo */
+.container {
+    text-align: center; /* Centraliza o texto */
+    background-color: #fff; /* Cor de fundo branca */
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    padding: 30px; /* Espaçamento interno */
+    animation: bounceIn 0.5s ease-in-out; /* Animação ao carregar */
+}
+
+/* Estilo do título do jogo */
+h1 {
+    color: #ff4500; /* Cor vibrante laranja */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo do campo de entrada */
+input {
+    padding: 10px; /* Espaçamento interno */
+    border: 2px solid #ff4500; /* Borda colorida */
+    border-radius: 5px; /* Cantos arredondados */
+    margin-bottom: 15px; /* Espaçamento abaixo do campo */
+    width: 220px; /* Largura fixa */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo dos botões */
+button {
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #ff4500; /* Cor de fundo laranja */
+    border: none; /* Remove bordas padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    color: white; /* Cor do texto */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+button:hover {
+    background-color: #ff6347; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Levemente aumenta o tamanho */
+}
+
+/* Estilo para mensagens de feedback */
+#message {
+    margin-top: 20px; /* Espaçamento acima */
+    font-size: 18px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Animação de entrada do contêiner */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0); /* Começa invisível e pequeno */
+        opacity: 0; /* Totalmente transparente */
+    }
+    50% {
+        opacity: 1; /* Visível */
+        transform: scale(1.1); /* Levemente maior que o tamanho normal */
+    }
+    100% {
+        transform: scale(1); /* Retorna ao tamanho normal */
+    }
+}
+
+/* Animação de pulso nas mensagens */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Tamanho normal */
+    }
+    50% {
+        transform: scale(1.05); /* Aumenta o tamanho */
+    }
+    100% {
+        transform: scale(1); /* Retorna ao tamanho normal */
+    }
+}
